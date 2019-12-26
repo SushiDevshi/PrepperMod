@@ -29,8 +29,7 @@ namespace Prepper.weapon
                 EffectManager.SimpleMuzzleFlash(this.effectPrefab, base.gameObject, muzzleName, false);
             }
             bool isAuthority = base.isAuthority;
-            bool flag2 = isAuthority;
-            if (flag2)
+            if (isAuthority)
             {
                 new BulletAttack
                 {

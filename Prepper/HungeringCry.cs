@@ -11,9 +11,8 @@ namespace Prepper
         public override void OnEnter()
         {
             base.OnEnter();
-            bool flag = NetworkServer.active && base.characterBody;
-
-            if (flag)
+            bool isAuthority = base.isAuthority;
+            if (isAuthority)
             { 
                 base.GetComponent<PrepperController>().Hunger();
                 new BlastAttack
