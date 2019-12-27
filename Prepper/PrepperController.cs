@@ -8,18 +8,12 @@ public class PrepperController : MonoBehaviour
     public bool hungering = false;
     public float maxDuration = 3f;
     private CharacterBody characterBody;
-    private TeamComponent teamComponent;
     private float duration;
-    public bool useGroundPound = false;
-    public bool executeGroundPound = false;
-    private CharacterMotor characterMotor;
     private float baseDuration;
 
     private void Start()
     {
         this.characterBody = base.GetComponent<CharacterBody>();
-        this.characterMotor = base.GetComponent<CharacterMotor>();
-        this.teamComponent = base.GetComponent<TeamComponent>();
         this.hungering = false;
     }
     private void Update()
