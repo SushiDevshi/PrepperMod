@@ -7,8 +7,6 @@ public class PrepperController : MonoBehaviour
     public bool rechargingOnHit = false;
     public bool hungering = false;
     public float maxDuration = 3f;
-    public float durationOnHit = 0.32f;
-    public float overclockTargetArmor = 30f;
     private CharacterBody characterBody;
     private TeamComponent teamComponent;
     private float duration;
