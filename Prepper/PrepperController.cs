@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PrepperController : MonoBehaviour
 {
-    public bool rechargingOnHit = false;
+    public bool rechargingOnHit = false;    
     public bool hungering = false;
     public float maxDuration = 3f;
     private CharacterBody characterBody;

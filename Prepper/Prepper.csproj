@@ -327,6 +327,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main.cs" />
     <Compile Include="Hungering.cs" />
     <Compile Include="PrepperController.cs" />
     <Compile Include="Shotgun.cs" />

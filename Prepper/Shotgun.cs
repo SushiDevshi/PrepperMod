@@ -2,7 +2,7 @@
 using RoR2;
 using UnityEngine;
 
-namespace Prepper.weapon
+namespace Prepper.Weapon
 {
     public class Shotgun : BaseState
     {
