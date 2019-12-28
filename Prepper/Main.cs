@@ -30,7 +30,7 @@ namespace Prepper
                     //We're finding the body prefab here,
                     bodyPrefab = Prepper,
                     //Description
-                    descriptionToken = "ERROR_MANUAL_NOT_INCLUDED. FETCHING USER GENERATED MANUAL FROM GITHUB... SUCCESS. HAN-D is a 75% melee survivor and 25% ranged survivor who can lay down a heavy barrage of melee attacks and ranged attacks upon enemies.<color=#CCD3E0>\n\n< ! > HURT is a powerful attack that can hit multiple enemies at once with no fall off.\n\n< ! > Use DISPOSAL to add extra seconds to OVERCLOCK when enemies aren't in melee range.\n\n< ! > OVERCLOCK gives a powerful rush of boosted damage, but has a long cooldown!\n\n< ! > OVERCLOCK's duration is extended with each hit. Stay in the heat of battle to keep OVERCLOCK heated.</color>",
+                    descriptionToken = "gay baby",
                     //Display 
                     displayPrefab = display,
                     //Color on the select screen
@@ -44,8 +44,13 @@ namespace Prepper
                 EntityStateMachine P_ESM = item.bodyPrefab.GetComponent<EntityStateMachine>();
                 CharacterModel P_CML = item.bodyPrefab.GetComponent<CharacterModel>();
                 CharacterDirection P_CD = item.bodyPrefab.GetComponent<CharacterDirection>();
+                ModelLocator P_ML = item.bodyPrefab.GetComponent<ModelLocator>();
                 SkillLocator P_SL = item.bodyPrefab.GetComponent<SkillLocator>();
+                ModelSkinController P_MSC = item.bodyPrefab.GetComponent<ModelSkinController>();
+                RagdollController P_RC = item.bodyPrefab.GetComponent<RagdollController>();
+                Rigidbody P_RB = item.bodyPrefab.GetComponent<Rigidbody>();
                 SkillFamily P_SF = item.bodyPrefab.GetComponent<SkillFamily>();
+                P_CB.baseNameToken = "PREPPER_BODY_NAME";
                 //big ol' block of skil code
                 SkillFamily PY_skillFamily = P_SL.primary.skillFamily;
                 SkillFamily SY_skillFamily = P_SL.secondary.skillFamily;
@@ -59,10 +64,9 @@ namespace Prepper
                 PY.activationState = new EntityStates.SerializableEntityStateType(typeof(Shotgun));
                 var PYfield = typeof(EntityStates.SerializableEntityStateType)?.GetField("_typeName", BindingFlags.NonPublic | BindingFlags.Instance);
                 PYfield?.SetValue(PY.activationState, typeof(Shotgun)?.AssemblyQualifiedName);
-                P_CB.baseNameToken = "PREPPER_BODY_NAME";
                 UY.activationState = new EntityStates.SerializableEntityStateType(typeof(HungeringCry));
                 var UYfield = typeof(EntityStates.SerializableEntityStateType)?.GetField("_typeName", BindingFlags.NonPublic | BindingFlags.Instance);
-                UYfield?.SetValue(UY.activationState, typeof(Shotgun)?.AssemblyQualifiedName);
+                UYfield?.SetValue(UY.activationState, typeof(HungeringCry)?.AssemblyQualifiedName);
 
             }
         }
